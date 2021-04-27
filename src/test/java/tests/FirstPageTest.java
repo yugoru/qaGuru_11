@@ -15,7 +15,7 @@ public class FirstPageTest {
     @DisplayName("Проверяем первую страницу")
     @Owner("Yulia Gorshkova")
     @Tag("smoke")
-    public void searchIssue() {
+    public void firstPageTest() {
         step("Открываем главную страницу", () -> open("https://soft-machine.ru/"));
         step("Проверяем наличие логотипа", () -> {
             $("img[alt='Софтмашина']").shouldBe(visible);

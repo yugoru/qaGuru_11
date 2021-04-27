@@ -18,7 +18,8 @@ public class VacancyTest {
     @Owner("Yulia Gorshkova")
     @Tag("smoke")
     @Tag("regression")
-    public void searchIssue() {
+
+    public void vacancyTest() {
         step("Открываем главную страницу", () -> open("https://soft-machine.ru/"));
         step("Прокручиваем до появления кнопки 'Присоединяйтесь', кликаем кнопку", () -> {
             $(".join__content").scrollTo();

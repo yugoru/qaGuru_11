@@ -21,7 +21,7 @@ public class PersonalDataPolicyTest {
     @DisplayName("Проверяем файл с политикой персональных данных")
     @Owner("Yulia Gorshkova")
     @Tag("smoke")
-    public void searchIssue() throws IOException {
+    public void personalDataPolicyTest() throws IOException {
         step("Открываем главную страницу", () -> open("https://soft-machine.ru/"));
         step("Прокручиваем до футера сайта", () -> {
             $(".foot").scrollTo();
