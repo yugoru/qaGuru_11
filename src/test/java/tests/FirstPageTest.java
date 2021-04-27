@@ -16,7 +16,9 @@ public class FirstPageTest {
     @Owner("Yulia Gorshkova")
     @Tag("smoke")
     public void firstPageTest() {
-        step("Открываем главную страницу", () -> open("https://soft-machine.ru/"));
+//        step("Открываем главную страницу", () -> open("https://soft-machine.ru/"));
+        step("Открываем главную страницу", () -> open("https://yandex.ru/"));
+
         step("Проверяем наличие логотипа", () -> {
             $("img[alt='Софтмашина']").shouldBe(visible);
         });
