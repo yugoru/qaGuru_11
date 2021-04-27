@@ -33,6 +33,11 @@ public class TestBase {
             String user = driverConfig.remoteWebUser();
             String password = driverConfig.remoteWebPassword();
             Configuration.remote = String.format(remoteWebDriver, user, password);
+
+            System.out.println(user);
+            System.out.println(password);
+            System.out.println(remoteWebDriver);
+            System.out.println(String.format(remoteWebDriver, user, password));
         }
     }
 
