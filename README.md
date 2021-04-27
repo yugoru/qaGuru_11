@@ -4,4 +4,4 @@
 Gradle, Allure, Jenkins, JUnit5, Selenide, Selenoid, Java.
 Отчеты в телеграм - бот Allure notifications.
 ##Сборка в Jenkins и отчет в Allure
-https://jenkins.autotests.cloud/job/c05-yugoru-homework11/allure
+https://jenkins.autotests.cloud/job/c05-yugoru-homework11/

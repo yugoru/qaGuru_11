@@ -17,6 +17,7 @@ public class VacancyTest {
     @DisplayName("Проверяем ссылку на вакансии")
     @Owner("Yulia Gorshkova")
     @Tag("smoke")
+    @Tag("regression")
     public void searchIssue() {
         step("Открываем главную страницу", () -> open("https://soft-machine.ru/"));
         step("Прокручиваем до появления кнопки 'Присоединяйтесь', кликаем кнопку", () -> {
