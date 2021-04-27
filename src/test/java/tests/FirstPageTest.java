@@ -9,7 +9,7 @@ import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
-
+@DisplayName("Проверяем первую страницу")
 public class FirstPageTest extends TestBase {
 
     @Test

@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static helpers.FormatFiles.getPdf;
 import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
-
+@DisplayName("Проверяем файл с политикой персональных данных")
 public class PersonalDataPolicyTest extends TestBase {
 
     @Test
