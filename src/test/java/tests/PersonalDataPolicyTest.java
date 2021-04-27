@@ -1,6 +1,7 @@
 package tests;
 
 import com.codeborne.pdftest.PDF;
+import helpers.TestBase;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -15,7 +16,7 @@ import static helpers.FormatFiles.getPdf;
 import static io.qameta.allure.Allure.step;
 import static org.hamcrest.MatcherAssert.assertThat;
 
-public class PersonalDataPolicyTest {
+public class PersonalDataPolicyTest extends TestBase {
 
     @Test
     @DisplayName("Проверяем файл с политикой персональных данных")

@@ -1,5 +1,6 @@
 package tests;
 
+import helpers.TestBase;
 import io.qameta.allure.Owner;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -9,7 +10,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class FirstPageTest {
+public class FirstPageTest extends TestBase {
 
     @Test
     @DisplayName("Проверяем первую страницу")
