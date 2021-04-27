@@ -9,7 +9,8 @@ repositories {
 
 def allureVersion = "2.13.8",
     selenideVersion = "5.20.1",
-    junitVersion = "5.7.1"
+    junitVersion = "5.7.1",
+    choice = System.getProperty("tags")
 
 allure {
     version = allureVersion
@@ -20,15 +21,14 @@ allure {
         version = allureVersion
     }
 }
-
 dependencies {
     testImplementation(
             "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:$selenideVersion",
-            "com.codeborne:pdf-test:1.5.1",
             "io.qameta.allure:allure-selenide:$allureVersion",
             "com.github.javafaker:javafaker:1.0.2",
-
+            "org.aeonbits.owner:owner:1.0.12",
+            "com.codeborne:pdf-test:1.5.1",
             "org.junit.jupiter:junit-jupiter-api:$junitVersion")
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
 }
@@ -39,6 +39,16 @@ tasks.withType(JavaCompile) {
     targetCompatibility = JavaVersion.VERSION_1_8
 }
 
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+}
+
 test {
-    useJUnitPlatform()
+    useJUnitPlatform {
+        if (choice == "smoke") {
+            includeTags "smoke"
+        } else if (choice == "regress") {
+            includeTags "regress"
+        } else includeTags "smoke", "regress"
+    }
 }
